@@ -1,5 +1,5 @@
 /*
-双十一无门槛红包
+双十一无门槛红包22
 cron 0 20 * * *  https://raw.githubusercontent.com/smiek2121/scripts/master/gua_redEnvelopes.js
 整点跑 红包几率大点
 ck1助力 作者
