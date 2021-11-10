@@ -13,7 +13,7 @@ https://u.jd.com/yt5HPfV
 
 let rebateCodes = ''
 
-const $ = new Env('双十一无门槛红包');
+const $ = new Env('双十一无门槛红包22');
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 const notify = $.isNode() ? require('./sendNotify') : '';
 const Faker = $.isNode() ? require('./sign_graphics_validate.js') : '';
