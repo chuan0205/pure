@@ -21,7 +21,7 @@ const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 // const notify = $.isNode() ? require('./sendNotify') : '';
 $.CryptoJS = $.isNode() ? require('crypto-js') : CryptoJS;
 let UA = `jdapp;iPhone;10.0.5;${Math.ceil(Math.random()*2+12)}.${Math.ceil(Math.random()*4)};${randomString(40)};`
-let helpNum=7;
+let helpNum=8;
 function randomString(e) {
   e = e || 32;
   let t = "abcdefhijkmnprstwxyz2345678", a = t.length, n = "";

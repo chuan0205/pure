@@ -40,7 +40,7 @@ let cookiesArr = [], cookie = '', token = '';
 let UA, UAInfo = {}, num
 let nowTimes;
 // 指定助力前几个账号
-let helpNum=7
+let helpNum=8
 
 const randomCount = $.isNode() ? 3 : 3;
 if ($.isNode()) {
