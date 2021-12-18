@@ -1,6 +1,6 @@
 /*
 根据自己服务器的运行时间改定时
-默认兑换10元，export CFD_MOON_NUM="5"#兑换5元
+默认兑换5元，export CFD_MOON_NUM="5"#兑换5元
 cron 0 * * * * jd_cfdhctx.js
 */
 const $ = new Env('财富岛兑换');
@@ -8,8 +8,8 @@ const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 //IOS等用户直接用NobyDa的jd cookie
 let cookiesArr = [], cookie = '', message ='', index, nickName = '';
 let cfd_moon = process.env.CFD_MOON_NUM * 1;
-let   dwLvl=2;
-let   ddwVirHb=1000;
+let   dwLvl=3;
+let   ddwVirHb=500;
 if ($.isNode()) {
   Object.keys(jdCookieNode).forEach((item) => {
     cookiesArr.push(jdCookieNode[item])
@@ -79,8 +79,7 @@ function taskPostUrl(){
 
 function taskUrl(cookie) {
             return {
-                "url": `https://m.jingxi.com/jxbfd/user/ExchangePearlHb?__t=1639634408277&strZone=jxbfd&dwLvl=${dwLvl}&dwIsRandHb=0&ddwVirHb=${ddwVirHb}&strPoolName=anhjZmQyX2V4Y2hhbmdlX2hjaGJfMjAyMTEyMTM%3D&dwExchangeType=0&_stk=__t%2CddwVirHb%2CdwExchangeType%2CdwIsRandHb%2CdwLvl%2CstrPoolName%2CstrZone&_ste=1&h5st=20211216140008278%3B8285029818404162%3B10032%3Btk01wcbe71cbb30nqEdIsmyjeT2SInxHh1IZE2ssGMhXQbWCx3%2BiTl3DxirkJluFhjKsBuPnv9GKTujItZ%2B7E2gEyrH0%3B790e39800d2e541afe287077ebd859edd6c4696740370103e2b4dd4d82a3d70e&_=1639634408280&sceneval=2&g_login_type=1&callback=jsonpCBKJ&g_ty=ls h2`,
-                // "url": `https://m.jingxi.com/jxbfd/user/ExchangePearlHb?__t=1639191834086&strZone=jxbfd&dwLvl=${dwLvl}&dwIsRandHb=0&ddwVirHb=${ddwVirHb}&strPoolName=anhjZmQyX2V4Y2hhbmdlX2hjaGJfMjAyMTEyMDk%3D&dwExchangeType=0&_stk=__t%2CddwVirHb%2CdwExchangeType%2CdwIsRandHb%2CdwLvl%2CstrPoolName%2CstrZone&_ste=1&h5st=20211211110354088%3B8285029818404162%3B10032%3Btk01wa7e31bb330n7NShWBDSSig1nbeZupyvgnyimIYfI7b73Gq%2FORLUKv%2F%2FAdBcf86F3K4qTKNoWlgg%2BbCFmYXPRIEk%3B09ca1a7cafb2845dc5658972eceb4df02c06c581df14154fa1d2d6b94535b38b&_=1639191834092&sceneval=2&g_login_type=1&callback=jsonpCBKE&g_ty=ls h2`,
+                "url": `https://m.jingxi.com/jxbfd/user/ExchangePearlHb?__t=1639797765629&strZone=jxbfd&dwLvl=${dwLvl}&dwIsRandHb=0&ddwVirHb=${ddwVirHb}&strPoolName=anhjZmQyX2V4Y2hhbmdlX2hjaGJfMjAyMTEyMTc%3D&dwExchangeType=0&_stk=__t%2CddwVirHb%2CdwExchangeType%2CdwIsRandHb%2CdwLvl%2CstrPoolName%2CstrZone&_ste=1&h5st=20211218112245631%3B8285029818404162%3B10032%3Btk01wd2b11cbf30nt0TaMumbTFTLtrevVMhTE6ZqjRhN%2FFxofqjWa2wXNXruOXLTnv%2FPSHXJwIE%2BzCg%2BJL48OQFExvbt%3B1a82327a33d390c91d39b38e244fc2c420bfc4f2fbac554cfee73e5207ade6dc&_=1639797765635&sceneval=2&g_login_type=1&callback=jsonpCBKI&g_ty=ls h2`,
                 "headers": {
                     "Host": "m.jingxi.com",
                     "User-Agent": $.isNode() ? (process.env.JD_USER_AGENT ? process.env.JD_USER_AGENT : (require('./USER_AGENTS').USER_AGENT)) : ($.getdata('JDUA') ? $.getdata('JDUA') : "jdapp;iPhone;9.4.4;14.3;network/4g;Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1"),
