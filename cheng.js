@@ -26,7 +26,7 @@ if ($.isNode()) {
   cookiesArr = [$.getdata('CookieJD'), $.getdata('CookieJD2'), ...jsonParse($.getdata('CookiesJD') || "[]").map(item => item.cookie)].filter(item => !!item);
 }
 const JD_API_HOST = 'https://api.m.jd.com/client.action';
-let inviteCodes = ['-ryUXKVaZmNHMhfNS4_B8LjfOwi-n0bv','-ryUB-RWLh8aAVu5LaiAu23RFFNqBh4','-ryUPtduBT89EnOVMby9u7JO33J73OQ']
+let inviteCodes = ['oe37XK0MZmZGZBSrCpeJ95vjZXUv','-ryUCvhlIwIkMk6lLpGnu5Qbn35soG8','-ryUXP9ZZ2NAZ0TGTt-U87qnosBSwFaD']
 $.shareCodesArr = [];
 
 !(async () => {
