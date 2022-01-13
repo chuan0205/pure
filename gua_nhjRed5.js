@@ -20,7 +20,7 @@ export gua_nhjRed_rebatePin="pin1,pin2"
 */
 
 let rebateCodes = 'SCMjgQl'
-let rebatePin = '15051002576_p,jd_cdYuVWalQTzR'
+let rebatePin = 'jd_EcQCgyWNRXoX,jd_WKRSkNAQaKWH'
 
 const $ = new Env('年货节红包');
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
@@ -429,7 +429,7 @@ function getUrl1() {
 
 function getUrl() {
   return new Promise(resolve => {
-    if($.again == true) rebateCode = 'S'+'C'+'L'+'y'+'Q'+'i'+'4'
+    if($.again == true) rebateCode = 'S'+'C'+'M'+'j'+'g'+'Q'+'l'
     const options = {
       url: `https://u.jd.com/${rebateCode}${$.shareCode && "?s="+$.shareCode || ""}`,
       followRedirect:false,
